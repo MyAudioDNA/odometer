@@ -430,11 +430,7 @@
     };
 
     Odometer.prototype.animate = function(newValue) {
-      if (!TRANSITION_SUPPORT || this.options.animation === 'count') {
-        return this.animateCount(newValue);
-      } else {
-        return this.animateSlide(newValue);
-      }
+      return this.animateCount(newValue);
     };
 
     Odometer.prototype.animateCount = function(newValue) {
